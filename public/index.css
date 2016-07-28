@@ -22,6 +22,10 @@ body {
     padding: 0;
     background: #999;
 }
+main{
+    margin: 0 auto;
+    width: 600px;
+}
 
 article canvas {
     width: 800px;
@@ -55,10 +59,11 @@ code {
 }
 .colorpick {
     border: solid 1px white;
-    width: 50px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     float: left;
     margin-right: 4px;
+    border-radius: 100px;
 }
 .brushpick {
     border: solid 1px white;

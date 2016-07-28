@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>litepaper</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.min.js"></script>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="index.css" rel="stylesheet">
+    <script src="gif.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+</head>
+
+<body>
+    <main>
+        <div style="relative; height: 50px;">
+            <div class="colorpick selected" style="background: #000"></div>
+            <div class="colorpick" style="background: #fff"></div>
+            <div class="colorpick" style="background: #DDBABA"></div>
+            <div class="brushpick">1</div>
+            <div class="brushpick">3</div>
+            <div class="brushpick selected">5</div>
+            <div class="brushpick">10</div>
+            <div class="brushpick">30</div>
+        </div>
+        <div style="position: relative; height: 600px;">
+            <canvas style="position: absolute; top:0; left: 0;" id="onionSkinCanvas" width="600" height="600"></canvas>
+            <canvas style="position: absolute; top:0; left: 0; opacity: 0.9;" id="drawCanvas" width="600" height="600"></canvas>
+        </div>
+        <div>
+            <canvas data-enabled="false" class="cc selected" width="600" height="600"></canvas>
+            <canvas data-enabled="false" class="cc" width="600" height="600"></canvas>
+            <canvas data-enabled="false" class="cc" width="600" height="600"></canvas>
+            <canvas data-enabled="false" class="cc" width="600" height="600"></canvas>
+            <canvas data-enabled="false" class="cc" width="600" height="600"></canvas>
+            <canvas data-enabled="false" class="cc" width="600" height="600"></canvas>
+            <canvas data-enabled="false" class="cc" width="600" height="600"></canvas>
+            <canvas data-enabled="false" class="cc" width="600" height="600"></canvas>
+
+        </div>
+        <div>
+            <button id="undo">アンドゥ</button>
+            <button id="clear">クリア</button>
+            <button id="save">GIF出力＆再生</button>
+            <button id="tweet">投稿</button>
+        </div>
+        <p id="linkbox">out</p>
+
+        <img src="" alt="" id="result" style="height: 400px; width: 400px; float:left">
+
+
+        <form action="/" name="form" id="form" method="post">
+            <input type="hidden" name="image" id="imageData">
+        </form>
+
+    </main>
+    <script type="text/javascript" src="js/gifpaper.js">
+    </script>
+
+</body>
+
+</html>
