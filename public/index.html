@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>litepaper</title>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="normalize.css">
     <link href="index.css" rel="stylesheet">
     <script src="gif.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <script src="//www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
 </head>
 
 <body>
     <main>
-        <div style="relative; height: 50px;">
+        <div class="nav">
             <div class="colorpick selected" style="background: #000"></div>
             <div class="colorpick" style="background: #fff"></div>
             <div class="colorpick" style="background: #DDBABA"></div>
@@ -23,7 +24,11 @@
             <div class="brushpick">3</div>
             <div class="brushpick selected">5</div>
             <div class="brushpick">10</div>
-            <div class="brushpick">30</div>
+            <div class="navbtn" id="undo">Undo</div>
+            <div class="navbtn" id="clear">Clear</div>
+            <div class="navbtn" id="save">Play</div>
+            <div class="navbtn" id="tweet">Submit</div>
+            
         </div>
         <div style="position: relative; height: 600px;">
             <canvas style="position: absolute; top:0; left: 0;" id="onionSkinCanvas" width="600" height="600"></canvas>
@@ -41,10 +46,6 @@
 
         </div>
         <div>
-            <button id="undo">アンドゥ</button>
-            <button id="clear">クリア</button>
-            <button id="save">GIF出力＆再生</button>
-            <button id="tweet">投稿</button>
         </div>
         <p id="linkbox">out</p>
 

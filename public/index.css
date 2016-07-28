@@ -17,14 +17,36 @@ canvas {
     image-rendering: pixelated;
     /* CSS4 Proposed  */
 }
+
+html {
+    font-family: 'Raleway', sans-serif;
+}
 body {
     margin: 0;
     padding: 0;
     background: #999;
+
 }
 main{
     margin: 0 auto;
     width: 600px;
+}
+.nav{
+    display: flex; height: 50px; margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.navbtn{
+    margin-left: 0.75em;
+    font-size: 0.8rem;
+    line-height: 35px;
+    height: 30px;
+    border: 1px solid #eee;
+    width: 60px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 900;
+    cursor: pointer;
 }
 
 article canvas {
@@ -50,14 +72,12 @@ code {
     height: 30px;
     line-height: 30px;
     padding: 0 10px;
-    vertical-align: middle;
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
     color: black;
     font-weight: bold;
 }
 .colorpick {
+    cursor: pointer;
     border: solid 1px white;
     width: 30px;
     height: 30px;
@@ -66,12 +86,16 @@ code {
     border-radius: 100px;
 }
 .brushpick {
+    cursor: pointer;
     border: solid 1px white;
-    width: 50px;
-    height: 34px;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     float: left;
     margin-right: 4px;
-    font-size: 2rem;
+    font-size: 0.8rem;
+    font-weight: 900;
     text-align: center;
     padding-top: 2px;
 }
