@@ -26,15 +26,12 @@
             <div class="brushpick">10</div>
             <div class="navbtn" id="undo">Undo</div>
             <div class="navbtn" id="clear">Clear</div>
-            <div class="navbtn" id="save">Play</div>
-            <div class="navbtn" id="tweet">Submit</div>
-            
         </div>
         <div style="position: relative; height: 600px;">
             <canvas style="position: absolute; top:0; left: 0;" id="onionSkinCanvas" width="600" height="600"></canvas>
             <canvas style="position: absolute; top:0; left: 0; opacity: 0.9;" id="drawCanvas" width="600" height="600"></canvas>
         </div>
-        <div class="ccContainer">
+        <div>
             <canvas data-enabled="false" class="cc selected" width="600" height="600"></canvas>
             <canvas data-enabled="false" class="cc" width="600" height="600"></canvas>
             <canvas data-enabled="false" class="cc" width="600" height="600"></canvas>
@@ -46,14 +43,12 @@
         </div>
         <div>
         </div>
-        <p id="linkbox">out</p>
+        <div style="margin-top: 1em;">
+            <div class="navbtn" style="width: 100px;" id="tweet">Create URL</div>
+            <p id="linkbox"></p>
+        </div>
 
-        <img src="" alt="" id="result" style="height: 400px; width: 400px; float:left">
-
-
-        <form action="/" name="form" id="form" method="post">
-            <input type="hidden" name="image" id="imageData">
-        </form>
+        <img src="" alt="" id="result">
 
     </main>
     <script type="text/javascript" src="js/gifpaper.js">

@@ -77,7 +77,7 @@ function uploadImage(file) {
         console.log(snapshot.metadata);
         var url = snapshot.metadata.downloadURLs[0];
         console.log('File available at', url);
-        document.getElementById('linkbox').innerHTML = '<a href="' + url + '">Click For File</a>';
+        document.getElementById('linkbox').innerHTML = '<a href="' + url + '">'+url+'</a>';
     }).catch(function (error) {
         console.error('Upload failed:', error);
     });
@@ -110,19 +110,9 @@ function saveGif(callback) {
         alert("NO IMAGE");
     } else {
         gif.on('finished', function (blob) {
-            uploadImage(blob);
-
             $("#result").attr("src", URL.createObjectURL(blob));
-            //var dataurl = $("#result")[0].toDataURL("image/gif");
             if (callback) {
-                var reader = new window.FileReader();
-                reader.readAsDataURL(blob);
-                reader.onloadend = function () {
-                    var base64data = reader.result;
-                    callback(base64data);
-                    console.log(base64data);
-                }
-                //callback(dataurl);
+                callback(blob);
             }
         });
 
@@ -181,9 +171,8 @@ $(document).ready(function () {
     });
 
     $("#tweet").click(function () {
-        saveGif(function (image) {
-            $("#imageData").val(image);
-            document.form.submit();
+        saveGif(function (blob) {
+            uploadImage(blob);
         });
     });
 
@@ -195,10 +184,16 @@ $(document).ready(function () {
         clear(sprites[idx], true);
         $(sprites[idx]).attr("data-enabled", "false");
     });
+    var later = _.debounce(function(){
+        saveGif();
+    }, 1000);
+
 
     mainCanvas.on("mouseup touchend", function () {
         c2c(this, sprites[idx]);
         $(sprites[idx]).attr("data-enabled", "true");
+        later();
+
     });
     sprites.on("click", function () {
         idx = sprites.index(this);
