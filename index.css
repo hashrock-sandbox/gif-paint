@@ -1,0 +1,75 @@
+.cc {
+    border: solid 1px black;
+    width: 60px;
+    height: 60px;
+}
+canvas {
+    image-rendering: optimizeSpeed;
+    /* Legal fallback */
+    image-rendering: -moz-crisp-edges;
+    /* Firefox        */
+    image-rendering: -o-crisp-edges;
+    /* Safari         */
+    image-rendering: optimize-contrast;
+    /* CSS3 Proposed  */
+    image-rendering: crisp-edges;
+    /* CSS4 Proposed  */
+    image-rendering: pixelated;
+    /* CSS4 Proposed  */
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #999;
+}
+
+article canvas {
+    width: 800px;
+    height: 300px;
+    border: 1px solid #ccc;
+}
+pre.source {
+    background: #e5eeee;
+    padding: 10px 20px;
+    width: 760px;
+    overflow-x: auto;
+    border: 1px solid #acc;
+}
+code {
+    background: #cff;
+}
+.tools {
+    margin-bottom: 10px;
+}
+.tools a {
+    border: 1px solid black;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+.colorpick {
+    border: solid 1px white;
+    width: 50px;
+    height: 34px;
+    float: left;
+    margin-right: 4px;
+}
+.brushpick {
+    border: solid 1px white;
+    width: 50px;
+    height: 34px;
+    float: left;
+    margin-right: 4px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2px;
+}
+.selected{
+	border: solid 1px red;
+}
